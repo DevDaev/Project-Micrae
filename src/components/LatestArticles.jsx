@@ -2,9 +2,9 @@ import React from 'react';
 import s from './LatestArticles.module.css';
 
 const articles = [
-  { id: 1, title: '7 Zero-Waste Swaps You Can Make Today', img: 'https://source.unsplash.com/random/400x250?eco,sustainable' },
-  { id: 2, title: 'How to Build a Capsule Wardrobe',        img: 'https://source.unsplash.com/random/400x250?wardrobe' },
-  { id: 3, title: 'Eco-Friendly Cleaning Hacks',            img: 'https://source.unsplash.com/random/400x250?cleaning' },
+  { id: 1, title: '7 Zero-Waste Swaps You Can Make Today', img: './img/Latest Article 1.jpg' },
+  { id: 2, title: 'How to Build a Capsule Wardrobe',        img: './img/Latest Article 2.jpg' },
+  { id: 3, title: 'Eco-Friendly Cleaning Hacks',            img: './img/Latest Article 3.jpg' },
 ];
 
 export default function LatestArticles() {
@@ -16,7 +16,9 @@ export default function LatestArticles() {
         <div className={s.grid}>
           {articles.map(a => (
             <article key={a.id} className={s.card}>
-              <img src={a.img} alt={a.title} />
+              <div className="img">
+                <img src={a.img} alt={a.title} />
+              </div>
               <h3>{a.title}</h3>
               <a href={`#article-${a.id}`} className={s.read}>Read More</a>
             </article>

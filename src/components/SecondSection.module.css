@@ -40,12 +40,12 @@
 .card h3 {
   font-size: 1.2rem;
   font-weight: var(--fw-semibold, 600);
-  color: var(--clr-primary);
+  color: var(--clr-text);
 }
 
 .card p {
   flex: 1;
-  color: var(--clr-muted, #606060);
+  color: var(--clr-primary, #606060);
   line-height: 1.5;
 }
 
@@ -53,7 +53,7 @@
   align-self: flex-start;
   margin-top: 1rem;
   font-weight: var(--fw-semibold);
-  color: var(--clr-accent, #a3b18a);
+  color: var(--clr-text, #a3b18a);
   text-decoration: none;
 }
 

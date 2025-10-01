@@ -15,13 +15,13 @@
 .left h2 {
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 700;
-  color: var(--clr-primary, #3a5a40);
+  color: var(--clr-bg, #3a5a40);
 }
 
 .left h3 {
   font-size: 1.4rem;
   font-weight: 600;
-  color: var(--clr-accent, #a3b18a);
+  color: var(--clr-bg, #a3b18a);
   margin: .5rem 0 1.2rem;
 }
 

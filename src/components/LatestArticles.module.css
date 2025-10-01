@@ -1,6 +1,6 @@
 .section {
   padding: 5rem 1.5rem;
-  background: #ffffff;
+  background: #DB62EE;
 }
 
 .container {
@@ -23,18 +23,29 @@
 }
 
 .card {
-  background: var(--clr-bg, #f9fbf8);
+  background: var(--clr-primary, #f9fbf8);
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,.04);
   transition: transform .25s;
+  height: fit-content;
 }
 .card:hover { transform: translateY(-4px); }
 
 .card img {
-  width: 100%;
-  height: 160px;
+  margin-top: 1rem;
+  width: 80%;
+  height: 180px;
   object-fit: cover;
+  border-radius: 2rem;
+}
+
+.card img:hover {
+  transform: scale(1.2);
+  transition: transform .25s;
+  filter: brightness(70%);
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .card h3 {
@@ -48,7 +59,7 @@
   display: inline-block;
   margin: .8rem 1.2rem 1.5rem;
   font-weight: 600;
-  color: var(--clr-accent, #a3b18a);
+  color: var(--clr-bg, #a3b18a);
   text-decoration: none;
 }
 .read:hover { text-decoration: underline; }
@@ -59,6 +70,7 @@
 }
 
 .more {
+  /* background: var(--clr-text); */
   border: 1.5px solid var(--clr-primary);
   padding: .6rem 1.8rem;
   border-radius: 2rem;
@@ -68,7 +80,7 @@
   transition: background .25s, color .25s;
 }
 .more:hover {
-  background: var(--clr-primary);
+  background: var(--clr-bg);
   color: #fff;
 }
 
