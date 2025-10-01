@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Nav              from './components/Nav';
-import Hero             from './components/Hero';
+// import Hero             from './components/Hero';
 import SecondSection    from './components/SecondSection';
 import EBookCTA         from './components/EBookCTA';
 import LatestArticles   from './components/LatestArticles';
@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={
           <>
             <Nav />
-            <Hero />
+            {/* <Hero /> */}
             <SecondSection />
             <EBookCTA />
             <LatestArticles />
