@@ -1,6 +1,6 @@
 .section {
   padding: 5rem 1.5rem;
-  background: #ffffff;
+  background: var(--clr-accent, #f9fbf8);
 }
 
 .container {
@@ -11,7 +11,7 @@
 .heading {
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: var(--fw-bold, 700);
-  color: var(--clr-primary, #3a5a40);
+  color: var(--clr-text, #000);
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -24,7 +24,7 @@
 
 .card {
   background: var(--clr-bg, #f9fbf8);
-  border-radius: 1rem;
+  border-radius: 2rem;
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -61,6 +61,41 @@
   text-decoration: underline;
 }
 
+/* Youtube section */
+.videoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  margin: 6px;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 @media (max-width: 767px) {
   .grid { grid-template-columns: 1fr; }
+
+  .videoWrapper {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+  }
 }

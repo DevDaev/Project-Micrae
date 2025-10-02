@@ -9,15 +9,27 @@
 }
 
 .content {
-  max-width: 700px;
+  max-width: 580px;
+  left: 50px;
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  animation: fadeIn 1s ease-in-out;
+
 }
 
 .title {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin-bottom: 1.2rem;
+  /* font-size: clamp(2.2rem, 5vw, 3.5rem); */
   font-weight: var(--fw-bold);
   line-height: 1.2;
-  color: var(--clr-primary);
+  font-family: Georgia;
+  font-style: Bold;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--clr-bg);
 }
+
 
 .sub {
   margin: 1.5rem auto 2.5rem;
@@ -28,16 +40,17 @@
 
 .cta {
   display: inline-block;
-  background: var(--clr-primary);
+  background: var(--clr-bg);
   color: #fff;
-  padding: .9rem 2.2rem;
-  border-radius: 2rem;
+  padding: .9rem 3rem;
   font-weight: var(--fw-semibold);
   text-decoration: none;
   transition: background .25s;
+  margin-top: 1.2rem;
 }
 
-.cta:hover { background: var(--clr-accent); }
+.cta:hover { opacity: 0.7;}
+
 
 @media (max-width: 767px) {
   .hero { padding: 8rem 1.5rem 4rem; }

@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import s from './EBookCTA.module.css';
 
+const cards = [
+  { img: 'public/img/card1.jpg', caption: 'Eco-waste Management' },
+  { img: 'public/img/card2.jpg', caption: 'Sustainability' },
+  { img: 'public/img/card3.jpg', caption: 'Glowing Green' },
+  { img: 'public/img/card4.jpg', caption: 'Eco-Management' },
+];
+
 export default function EBookCTA() {
   const [email, setEmail] = useState('');
 
@@ -13,21 +20,25 @@ export default function EBookCTA() {
   return (
     <section className={s.section}>
       <div className={s.container}>
-        <div className={s.left}>
-          <h2>Download Our E-Book</h2>
-          <h3>Glow Gently</h3>
-
-          <ul className={s.bullets}>
-            <li>✓ Eco-waste Management</li>
-            <li>✓ Sustainability</li>
-            <li>✓ Glowing Green</li>
-            <li>✓ Eco-Management</li>
-          </ul>
+        {/* Centered Title */}
+        <div className={s.titleBlock}>
+          <h2 className={s.title}>Download Our E-Book</h2>
+          <h3 className={s.subtitle}>Glow Gently</h3>
         </div>
 
+        {/* Cards Section */}
+        <div className={s.cardsGrid}>
+          {cards.map((card, idx) => (
+            <div key={idx} className={s.card}>
+              <img src={card.img} alt={card.caption} className={s.cardImg} />
+              <p className={s.cardCaption}>{card.caption}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Email Form */}
         <div className={s.right}>
           <p className={s.sub}>Via Access Through Your Mail</p>
-
           <form onSubmit={handleSubmit} className={s.form}>
             <input
               type="email"
