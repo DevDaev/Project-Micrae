@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import s from './EBookCTA.module.css';
 
 const cards = [
-  { img: 'public/img/card1.jpg', caption: 'Eco-waste Management' },
-  { img: 'public/img/card2.jpg', caption: 'Sustainability' },
-  { img: 'public/img/card3.jpg', caption: 'Glowing Green' },
-  { img: 'public/img/card4.jpg', caption: 'Eco-Management' },
+  { img: 'img/bookCover.jpeg', caption: 'Eco-waste Management' },
+  { img: 'img/bookCover.jpeg', caption: 'Sustainability' },
+  { img: 'img/bookCover.jpeg', caption: 'Glowing Green' },
+  { img: 'img/bookCover.jpeg', caption: 'Eco-Management' },
 ];
-
 export default function EBookCTA() {
   const [email, setEmail] = useState('');
 
@@ -23,7 +22,7 @@ export default function EBookCTA() {
         {/* Centered Title */}
         <div className={s.titleBlock}>
           <h2 className={s.title}>Download Our E-Book</h2>
-          <h3 className={s.subtitle}>Glow Gently</h3>
+          <h2 className={s.subtitle}>Glow Gently </h2>
         </div>
 
         {/* Cards Section */}
@@ -35,6 +34,13 @@ export default function EBookCTA() {
             </div>
           ))}
         </div>
+
+        {/* Captions outside the card box
+        <div className={s.captionsRow}>
+          {cards.map((card, idx) => (
+            <span key={idx} className={s.captionOutside}>{card.caption}</span>
+          ))}
+        </div> */}
 
         {/* Email Form */}
         <div className={s.right}>

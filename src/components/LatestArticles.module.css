@@ -22,6 +22,11 @@
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+p{
+  text-align: left;
+  padding: 1.1rem;
+}
+
 .card {
   background: var(--clr-primary, #f9fbf8);
   border-radius: 1rem;
@@ -29,13 +34,16 @@
   box-shadow: 0 4px 12px rgba(0,0,0,.04);
   transition: transform .25s;
   height: fit-content;
+  width: 80%;           /* Reduced  */
+  padding: 0.5rem 0.5rem; /* Reduced padding */
 }
 .card:hover { transform: translateY(-4px); }
 
 .card img {
-  margin-top: 1rem;
-  width: 80%;
-  height: 180px;
+  display: block;
+  margin: 1rem auto 0 auto;
+  width: 80%;             /* Slightly larger relative to smaller card */
+  height: 180px;          /* Reduced height */
   object-fit: cover;
   border-radius: 2rem;
 }

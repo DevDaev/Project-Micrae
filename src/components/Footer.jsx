@@ -12,7 +12,7 @@ export default function Footer() {
           <a href="#contact">CONTACT</a>
         </nav>
 
-        <p className={s.brand}>EARTHWISELIVING</p>
+        <p className={s.brand}>EARTHWISE LIVING</p>
       </div>
     </footer>
   );

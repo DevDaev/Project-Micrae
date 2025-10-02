@@ -2,9 +2,9 @@ import React from 'react';
 import s from './LatestArticles.module.css';
 
 const articles = [
-  { id: 1, title: '7 Zero-Waste Swaps You Can Make Today', img: './img/Latest Article 1.jpg' },
-  { id: 2, title: 'How to Build a Capsule Wardrobe',        img: './img/Latest Article 2.jpg' },
-  { id: 3, title: 'Eco-Friendly Cleaning Hacks',            img: './img/Latest Article 3.jpg' },
+  { id: 1, title: '7 Zero-Waste Swaps You Can Make Today', img: './img/Latest Article 1.jpg' , paragraph: 'lorem ipsum habehbhbhyu huybac hihaevnj bygerg ainr hbuagyf haygyer bagfyien baueg7tfgae hby8agefyb'},
+  { id: 2, title: 'How to Build a Capsule Wardrobe',        img: './img/Latest Article 2.jpg', paragraph: 'lorem ipsum habehbhbhyu huybac hihaevnj bygerg ainr hbuagyf haygyer bagfyien baueg7tfgae hby8agefyb' },
+  { id: 3, title: 'Eco-Friendly Cleaning Hacks',            img: './img/Latest Article 3.jpg', paragraph: 'lorem ipsum habehbhbhyu huybac hihaevnj bygerg ainr hbuagyf haygyer bagfyien baueg7tfgae hby8agefyb' },
 ];
 
 export default function LatestArticles() {
@@ -20,6 +20,7 @@ export default function LatestArticles() {
                 <img src={a.img} alt={a.title} />
               </div>
               <h3>{a.title}</h3>
+              <p className='s.p'>{a.paragraph}</p>
               <a href={`#article-${a.id}`} className={s.read}>Read More</a>
             </article>
           ))}
