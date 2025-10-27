@@ -10,7 +10,7 @@ nav{
 }
 
 .active{
-  background: var(--clr-bg);
+  background: var(--clr-text);
   padding: .4rem 1.2rem;
   /* border-radius: 1rem; */
   color: var(--clr-primary); 
@@ -57,16 +57,24 @@ nav{
   text-decoration: none;
 }
 
+.shop{
+  background: var(--clr-bg);
+  padding: 1rem 2rem;
+  border-radius: .6rem;
+  color: var(--clr-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
 
 
 @media (max-width: 767px) {
   .hamburger { display: flex; }
-
   .nav {
     position: fixed;
-    inset: 0 0 0 40%;          /* slide from right */
-    background: violet;
+    inset: 0 0 0 40%;          
     display: flex;
+    background: var(--clr-bg);
+    /* color: #fff; */
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
@@ -74,17 +82,27 @@ nav{
     gap: 1.5rem;
     transform: translateX(100%);
     transition: transform .35s ease-out;
+    z-index: 1000;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
   }
 
-  .nav a{
-    color: var(--clr-text);
-  }
  
   .nav.show { transform: translateX(0); }
+
+  /* new classname for animation / visual state when nav is opened in responsive mode */
+  .navResponsive {
+    transform-origin: top center;
+    animation: nav-slide .22s cubic-bezier(.2,.9,.2,1) both;
+  }
 
   .shop{
   background: var(--clr-primary);
   padding: 1rem 2rem;
   border-radius: .6rem;
+  color: var(--clr-text);
 }
+@keyframes nav-slide {
+    from { opacity: 0; transform: translateY(-10px) scaleY(.98); }
+    to   { opacity: 1; transform: translateY(0) scaleY(1); }
+  }
 }

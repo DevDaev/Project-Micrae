@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import s from './Nav.module.css';
 
@@ -6,10 +6,31 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('resources');
 
+  const navRef = useRef(null);
+  const btnRef = useRef(null);
+
   const handleNavClick = (link) => {
     setOpen(false);
     setActiveLink(link);
   };
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (!open) return;
+      const target = e.target;
+      if (
+        navRef.current &&
+        !navRef.current.contains(target) &&
+        btnRef.current &&
+        !btnRef.current.contains(target)
+      ) {
+        setOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [open]);
 
   return (
     <header className={s.header}>
@@ -18,17 +39,18 @@ export default function Nav() {
 
         {/* hamburger */}
         <button
+          ref={btnRef}
           className={s.hamburger}
           onClick={() => setOpen(!open)}
           aria-label="toggle menu"
+          aria-expanded={open}
         >
           <span />
           <span />
           <span />
         </button>
 
-        <nav className={`${s.nav} ${open ? s.show : ''}`}>
-          {/* <div className="urls"> */}
+        <nav ref={navRef} className={`${s.nav} ${open ? s.show : ''}`}>
             <a
               href="#resources"
               onClick={() => handleNavClick('resources')}
@@ -57,18 +79,16 @@ export default function Nav() {
             >
               PARTNERSHIP
             </a>
-            
-          {/* </div> */}
 
           <div className="cart">
             <Link
-            to="/shop"
-            className={`${s.shop, s.active}`}
-            onClick={() => handleNavClick('shop')}
+              to="/shop"
+              className={`${s.shop} ${activeLink === 'shop' ? s.active : ''}`}
+              onClick={() => handleNavClick('shop')}
             >
-            SHOP
-          </Link>
-            </div>
+              SHOP
+            </Link>
+          </div>
         </nav>
       </div>
     </header>
