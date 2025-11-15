@@ -43,7 +43,7 @@ export default function SecondSection() {
     console.log('Subscribed:', email);
   };
   return (
-    <section className={s.section}>
+    <section id='second' className={s.section}>
       <div className={s.container}>
         <h2 className={s.heading}>Why Glow Gently Living</h2>
 
@@ -68,7 +68,7 @@ export default function SecondSection() {
             aria-label="Email address"
             required
           />
-          <button type="submit" className={s.subscribeBtn}>Subscribed</button>
+          <button type="submit" className={s.subscribeBtn}>Subscribe</button>
         </form>
       </div>
 

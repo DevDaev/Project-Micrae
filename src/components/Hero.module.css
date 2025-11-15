@@ -1,56 +1,33 @@
-.hero {
+.banner {
   background: var(--clr-primary);
-  padding: 8rem 2rem 4rem;
-  overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 5rem;
+  gap: 2rem;      
+  width: 100%;
 }
 
+/* IMAGE SIDE */
+.image {
+  flex: 0 0 30%;
+}
 
+.image img {
+  width: 100%;
+  height: auto;
+}
 
+/* TEXT SIDE */
 .content {
-  max-width: 600px;
-  z-index: 2;
+  flex: .78;                 /* <-- THIS is what makes it expand */
   padding: 2rem;
+  margin-left: 2.3rem;
   animation: fadeIn 1s ease-in-out;
-
+  z-index: 2;
 }
 
-.image{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  flex: left;
-}
-
-.text{
-  margin-left: -1.2rem;
-  text-align: left;
-}
-
-
-
-.title {
-  margin-bottom: 1.2rem;
-  font-weight: var(--fw-bold);
-  line-height: 1.2;
-  font-family: Georgia;
-  font-style: Bold;
-  line-height: 100%;
-  letter-spacing: 0%;
-  color: var(--clr-bkg);
-}
-
-
-.sub {
-  margin: 1.5rem auto 2.5rem;
-  font-size: 1.05rem;
-  color: var(--clr-muted);
-  max-width: 34ch;
+p{
+  margin-left: -1rem;
+  /* text-align: left; */
 }
 
 .cta {
@@ -69,4 +46,7 @@
 @media (max-width: 767px) {
   .hero { padding: 8rem 1.5rem 4rem; }
   .title { font-size: 2rem; }
+  .image{
+    display: none;
+  }
 }

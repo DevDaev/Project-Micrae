@@ -25,8 +25,8 @@ function App() {
             <Footer />
           </>
         } />
-        <Route path="/login"  element={<Login />} />
-        <Route path="/signup" element={<Signup />} /> {/* ← added */}
+        {/* <Route path="/login"  element={<Login />} /> */}
+        {/* <Route path="/signup" element={<Signup />} /> ← added */}
       </Routes>
     </>
   );

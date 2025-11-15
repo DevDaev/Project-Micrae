@@ -39,7 +39,11 @@ export default function YoutubeNewsletter() {
 
 
       <div className={s.box}>
-        <button className= {s.btn}> Subscribe to Glow Softly, Gently</button>
+        <button className= {s.btn}> 
+      <a href="#second">
+       Subscribe to Glow Softly, Gently
+      </a>
+       </button>
         </div>
       </div>
     </section>
