@@ -28,6 +28,10 @@ a{
   color: var(--clr-bkg);
 }
 
+h2 a{
+  text-decoration: none;
+  color: var(--clr-bkg);
+}
 .btn {
   align-self: flex-start;
   background: var(--clr-bkg); /* YouTube red */

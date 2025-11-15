@@ -23,8 +23,10 @@ export default function EBookCTA() {
         </div>
          {/* Centered Title */}
         <div className={s.titleBlock}>
-          <h2 className={s.title}>Download Our E-Book</h2>
-          <h2 className={s.subtitle}>Glow Gently </h2>
+          <h2 className={s.title}> 
+            <a href="https://selar.com/dj300g51t6">
+            Download The E-Book Glow Gently </a>
+            </h2>
         </div>
 
         {/* Captions outside the card box

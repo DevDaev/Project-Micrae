@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import s from './SecondSection.module.css';
 
 const cards = [
   { title: 'Financial Literacy', text: 'Manage your finance and get ready for the breakthrough' },
   { title: 'Safe Space', text: 'A welcoming, private community for growth' },
-  { title: 'Helpful Tips',  text: 'Practical tips you can apply today' },
+  { title: 'Helpful Tips', text: 'Practical tips you can apply today' },
 ];
 
 function Icon({ name }) {
@@ -37,13 +38,32 @@ function Icon({ name }) {
 }
 
 export default function SecondSection() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('');
+
   const handleSubscribe = (e) => {
     e.preventDefault();
-    const email = e.target.elements?.email?.value;
-    console.log('Subscribed:', email);
+
+    if (!email) return;
+
+    emailjs.send(
+      'YOUR_SERVICE_ID',    // replace with your EmailJS service ID
+      'YOUR_TEMPLATE_ID',   // replace with your EmailJS template ID
+      { user_email: email },
+      'YOUR_PUBLIC_KEY'     // replace with your EmailJS public key
+    )
+    .then(() => {
+      setStatus('Subscribed successfully!');
+      setEmail('');
+    })
+    .catch((err) => {
+      console.error(err);
+      setStatus('Subscription failed. Try again.');
+    });
   };
+
   return (
-    <section id='second' className={s.section}>
+    <section id="second" className={s.section}>
       <div className={s.container}>
         <h2 className={s.heading}>Why Glow Gently Living</h2>
 
@@ -63,15 +83,18 @@ export default function SecondSection() {
           <input
             type="email"
             name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className={s.emailInput}
-            placeholder="Join the News Letter @email"
+            placeholder="Join the Newsletter @email"
             aria-label="Email address"
             required
           />
           <button type="submit" className={s.subscribeBtn}>Subscribe</button>
         </form>
-      </div>
 
+        {status && <p>{status}</p>}
+      </div>
     </section>
   );
 }

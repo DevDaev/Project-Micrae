@@ -1,5 +1,6 @@
 .section {
   padding: 5rem 1.5rem;
+  height: auto;
   background: var(--clr-accent, #f9fbf8);
 }
 
@@ -89,7 +90,7 @@
   padding: .74rem 2rem;
   border: 1px solid var(--clr-bkg);
   background: transparent;
-  color: #fff;
+  color: var(--clr-bkg);
   border-top-left-radius: 0.6rem;
   border-bottom-left-radius: 0.6rem;
   outline: none;
