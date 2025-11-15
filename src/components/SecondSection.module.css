@@ -86,14 +86,14 @@
 }
 
 .emailInput {
-  padding: 0.8rem 1rem;
-  border: 1px solid #fff;
+  padding: .74rem 2rem;
+  border: 1px solid var(--clr-bkg);
   background: transparent;
   color: #fff;
   border-top-left-radius: 0.6rem;
   border-bottom-left-radius: 0.6rem;
   outline: none;
-  min-width: 260px;
+  width: 55%;
 }
 
 .emailInput::placeholder { color: var(--clr-bkg); opacity: 1; }

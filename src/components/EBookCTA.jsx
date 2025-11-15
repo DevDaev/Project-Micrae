@@ -18,7 +18,6 @@ export default function EBookCTA() {
           {cards.map((card, idx) => (
             <div key={idx} className={s.card}>
               <img src={card.img} alt={card.caption} className={s.cardImg} />
-              <p className={s.cardCaption}>{card.caption}</p>
             </div>
           ))}
         </div>

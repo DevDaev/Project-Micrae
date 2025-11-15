@@ -19,7 +19,6 @@ export default function YoutubeNewsletter() {
         {/* YouTube CTA */}
         <div className={s.col}>
           <h2>Earthwise Living On Youtube</h2>
-          <p>Subscribe to Earthwise Living on YouTube</p>
         </div>
 
         {/* YouTube Video Section */}
@@ -38,27 +37,9 @@ export default function YoutubeNewsletter() {
         </div>
       </div>
 
-        {/* Newsletter */}
-        <div className={s.col}>
-          <h2>News Letter Subscription</h2>
-          <form onSubmit={handleSubmit} className={s.form}>
-            <input
-              name="name"
-              placeholder="Name"
-              required
-              value={form.name}
-              onChange={handleChange}
-            />
-            <input
-              name="email"
-              type="email"
-              placeholder="E-mail"
-              required
-              value={form.email}
-              onChange={handleChange}
-            />
-            <button type="submit">Sign Up</button>
-          </form>
+
+      <div className={s.box}>
+        <button className= {s.btn}> Subscribe to Glow Softly, Gently</button>
         </div>
       </div>
     </section>

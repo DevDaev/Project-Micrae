@@ -2,9 +2,9 @@ import React from 'react';
 import s from './LatestArticles.module.css';
 
 const articles = [
-  { id: 1, title: 'Weekly; Green Girl on budget', img: './article 1.jpg' , },
-  { id: 2, title: 'Sustainable Swaps That Actually Save You Money',        img: './article 2.jpg', },
-  { id: 3, title: '“Trash to Treasure” DIYs – Upcycling Old Items',            img: './article 3.jpg',  },
+  { id: 1, title: 'Weekly; Green Girl on budget', img: '/article 1.png' , },
+  { id: 2, title: 'Sustainable Swaps That Actually Save You Money',        img: '/article 2.png', },
+  { id: 3, title: '“Trash to Treasure” DIYs – Upcycling Old Items',            img: './article 3.png',  },
 ];
 
 export default function LatestArticles() {
@@ -21,7 +21,6 @@ export default function LatestArticles() {
               </div>
               <h3>{a.title}</h3>
               <p className='s.p'>{a.paragraph}</p>
-              <a href={`#article-${a.id}`} className={s.read}>Read More</a>
             </article>
           ))}
         </div>

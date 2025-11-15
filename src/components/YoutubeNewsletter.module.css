@@ -1,14 +1,16 @@
 .section {
   padding: 5rem 1.5rem;
-  background: var(--clr-primary, #f9fbf8);
+  background: var(--clr-primary);
 }
 
 .container {
   max-width: var(--max-width, 1200px);
   margin: 0 auto;
-  display: grid;
+  display: flex;
   gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .col {
@@ -20,25 +22,28 @@
 .col h2 {
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
-  color: var(--clr-bg, #3a5a40);
-}
-
-.col p {
-  color: var(--clr-muted, #606060);
+  color: var(--clr-bkg);
 }
 
 .btn {
   align-self: flex-start;
-  background: var(--clr-bg); /* YouTube red */
+  background: var(--clr-bkg); /* YouTube red */
   color: #fff;
-  padding: 0.75rem 1.8rem;
+  padding: 0.9rem 2rem;
   border-radius: 2rem;
   font-weight: 600;
   text-decoration: none;
   transition: background 0.25s;
+  text-align: center;
 }
 .btn:hover {
-  background: #cc0000;
+  opacity: 0.75;
+}
+
+.box{
+  display: grid;
+  place-items: center;
+  width: 100%;
 }
 
 .form {
@@ -54,20 +59,20 @@
   font-size: 1rem;
 }
 
-.form button {
+btn {
   padding: 0.75rem;
   border: none;
   border-radius: 0.5rem;
-  background: var(--clr-bg);
+  background: var(--clr-bkg);
   color: #fff;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.25s;
 }
-.form button:hover {
+btn:hover {
   background: var(--clr-primary);
   color: var(--clr-bg);
-  border: 1px solid var(--clr-bg);
+  border: 1px solid var(--clr-bkg);
 }
 
 @media (max-width: 767px) {

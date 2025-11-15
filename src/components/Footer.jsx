@@ -42,7 +42,7 @@ export default function Footer() {
 
         <div className={s.legal}>
           <a href="/privacy" className={s.legalLink}>Privacy</a>
-          <span className={s.dot} aria-hidden="true">•</span>
+          <span className={s.dot} aria-hidden="true">| </span>
           <a href="/cookies" className={s.legalLink}>Cookies</a>
         </div>
       </div>

@@ -17,6 +17,10 @@ export default function HeroBanner() {
           Explore
         </a>
       </div>
+
+      <div className="image">
+        <img src="/undraw_girls-just-wanna-have-fun_jj2i.png" alt="" />
+      </div>
     </section>
   );
 }
