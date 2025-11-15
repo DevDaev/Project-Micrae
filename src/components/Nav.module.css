@@ -5,8 +5,10 @@
 nav{
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  margin: 1.5rem 0;
+  justify-content: center;
+  gap: 2.2rem;
+  margin: 1.8rem 0;
+  width: 100%;
 }
 
 .active{
@@ -18,6 +20,11 @@ nav{
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   transition: .3s;
 
+}
+
+.cart{
+  margin-left: 10rem;
+  /* margin-right: 2rem; */
 }
 
 /* ===== MOBILE ===== */
@@ -40,28 +47,31 @@ nav{
 
 .container .logo{
   font-weight: 700;
-  color: var(--clr-text);
+  color: var(--clr-bkg);
   text-decoration: none;
-  margin-left: 1.2rem;
+  margin-left: 4rem;
   font-size: 1.2rem;
 }
 .container .logo span{
-  color: var(--clr-bg);
+  color: var(--clr-heading);
 }
 
 .nav a:hover{
   opacity: 0.7;
+  color: var(--clr-bkg)
 }
 
 .nav a{
   text-decoration: none;
+  color: #000; /* default: other nav links in black */
+  font-weight: 600;
 }
 
 .shop{
-  background: var(--clr-bg);
+  background: var(--clr-bkg);
   padding: 1rem 2rem;
   border-radius: .6rem;
-  color: var(--clr-primary);
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
 }
@@ -96,13 +106,33 @@ nav{
   }
 
   .shop{
-  background: var(--clr-primary);
+  background: var(--clr-bkg);
   padding: 1rem 2rem;
   border-radius: .6rem;
-  color: var(--clr-text);
+  color: #fff;
 }
 @keyframes nav-slide {
     from { opacity: 0; transform: translateY(-10px) scaleY(.98); }
     to   { opacity: 1; transform: translateY(0) scaleY(1); }
   }
+}
+
+/* Resources link (anchor targeting) - give same pill style as shop */
+.nav a[href="#resources"]{
+  background: var(--clr-bkg);
+  color: #fff;
+  padding: .6rem 1rem;
+  border-radius: .6rem;
+  text-decoration: none;
+}
+
+/* Active link: text in --clr-bkg, keep pill background for contrast */
+.active{
+  background: var(--clr-text);
+  color: var(--clr-bkg);
+  padding: .4rem 1.2rem;
+  color: var(--clr-bkg); 
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: .3s;
 }

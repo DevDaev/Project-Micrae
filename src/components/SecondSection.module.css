@@ -18,16 +18,19 @@
 
 .grid {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .card {
-  background: var(--clr-bg, #f9fbf8);
+  background: var(--clr-bkg, #2b6b4a);
   border-radius: 2rem;
-  padding: 2rem 1.5rem;
+  padding: 1.2rem 1rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 0.75rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
   transition: transform 0.25s;
@@ -40,25 +43,78 @@
 .card h3 {
   font-size: 1.2rem;
   font-weight: var(--fw-semibold, 600);
-  color: var(--clr-text);
+  color: #fff;
 }
 
 .card p {
   flex: 1;
-  color: var(--clr-primary, #606060);
+  color: rgba(255,255,255,0.92);
   line-height: 1.5;
+  text-align: center;
 }
 
 .link {
   align-self: flex-start;
   margin-top: 1rem;
   font-weight: var(--fw-semibold);
-  color: var(--clr-text, #a3b18a);
+  color: rgba(255,255,255,0.95);
   text-decoration: none;
 }
 
 .link:hover {
   text-decoration: underline;
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.icon svg { width: 100%; height: 100%; }
+
+/* Newsletter input + inline button */
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: 1.5rem;
+}
+
+.emailInput {
+  padding: 0.8rem 1rem;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  border-top-left-radius: 0.6rem;
+  border-bottom-left-radius: 0.6rem;
+  outline: none;
+  min-width: 260px;
+}
+
+.emailInput::placeholder { color: var(--clr-bkg); opacity: 1; }
+
+.subscribeBtn {
+  background: var(--clr-bkg);
+  color: #fff;
+  border: none;
+  padding: 0.78rem 1rem;
+  font-weight: 600;
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.subscribeBtn:hover { opacity: 0.95; }
+
+@media (max-width: 480px) {
+  .newsletter { flex-direction: column; gap: 0.6rem; }
+  .emailInput { min-width: 100%; border-radius: .6rem; }
+  .subscribeBtn { width: 100%; border-radius: .6rem; }
 }
 
 /* Youtube section */

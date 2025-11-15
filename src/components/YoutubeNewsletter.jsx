@@ -20,15 +20,23 @@ export default function YoutubeNewsletter() {
         <div className={s.col}>
           <h2>Earthwise Living On Youtube</h2>
           <p>Subscribe to Earthwise Living on YouTube</p>
-          <a
-            href="https://www.youtube.com/@earthwiseliving"
-            target="_blank"
-            rel="noreferrer"
-            className={s.btn}
-          >
-            Subscribe
-          </a>
         </div>
+
+        {/* YouTube Video Section */}
+      
+      <div className={s.videoSection}>
+        <div className={s.videoWrapper}>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
 
         {/* Newsletter */}
         <div className={s.col}>

@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root {
-  --clr-bg:        #DB62EE;
-  --clr-primary:   #ffffff;   /* deep green */
-  --clr-accent:    #F1F1F180;   /* soft sage   */
-  --clr-text:      #181818;
-  --clr-muted:     #606060;
-  --clr-hover: #e19feb;
+  --clr-bkg:        #8968CD;
+  --clr-primary:   #ffffff;
+  --clr-heading: #000000;
 
   --fw-normal: 400;
   --fw-semibold: 600;

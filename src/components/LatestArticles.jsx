@@ -2,9 +2,9 @@ import React from 'react';
 import s from './LatestArticles.module.css';
 
 const articles = [
-  { id: 1, title: '7 Zero-Waste Swaps You Can Make Today', img: './img/Latest Article 1.jpg' , paragraph: 'lorem ipsum habehbhbhyu huybac hihaevnj bygerg ainr hbuagyf haygyer bagfyien baueg7tfgae hby8agefyb'},
-  { id: 2, title: 'How to Build a Capsule Wardrobe',        img: './img/Latest Article 2.jpg', paragraph: 'lorem ipsum habehbhbhyu huybac hihaevnj bygerg ainr hbuagyf haygyer bagfyien baueg7tfgae hby8agefyb' },
-  { id: 3, title: 'Eco-Friendly Cleaning Hacks',            img: './img/Latest Article 3.jpg', paragraph: 'lorem ipsum habehbhbhyu huybac hihaevnj bygerg ainr hbuagyf haygyer bagfyien baueg7tfgae hby8agefyb' },
+  { id: 1, title: 'Weekly; Green Girl on budget', img: './article 1.jpg' , },
+  { id: 2, title: 'Sustainable Swaps That Actually Save You Money',        img: './article 2.jpg', },
+  { id: 3, title: '“Trash to Treasure” DIYs – Upcycling Old Items',            img: './article 3.jpg',  },
 ];
 
 export default function LatestArticles() {

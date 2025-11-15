@@ -2,28 +2,16 @@ import React, { useState } from 'react';
 import s from './EBookCTA.module.css';
 
 const cards = [
-  { img: 'img/bookCover.jpeg', caption: 'Eco-waste Management' },
-  { img: 'img/bookCover.jpeg', caption: 'Sustainability' },
-  { img: 'img/bookCover.jpeg', caption: 'Glowing Green' },
-  { img: 'img/bookCover.jpeg', caption: 'Eco-Management' },
+  { img: '/available book.png', caption: 'Eco-waste Management' },
 ];
 export default function EBookCTA() {
-  const [email, setEmail] = useState('');
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    alert(`Mock: send e-book to ${email}`);
-    setEmail('');
-  };
+ 
+ 
 
   return (
     <section className={s.section}>
       <div className={s.container}>
-        {/* Centered Title */}
-        <div className={s.titleBlock}>
-          <h2 className={s.title}>Download Our E-Book</h2>
-          <h2 className={s.subtitle}>Glow Gently </h2>
-        </div>
+       
 
         {/* Cards Section */}
         <div className={s.cardsGrid}>
@@ -34,6 +22,11 @@ export default function EBookCTA() {
             </div>
           ))}
         </div>
+         {/* Centered Title */}
+        <div className={s.titleBlock}>
+          <h2 className={s.title}>Download Our E-Book</h2>
+          <h2 className={s.subtitle}>Glow Gently </h2>
+        </div>
 
         {/* Captions outside the card box
         <div className={s.captionsRow}>
@@ -42,20 +35,6 @@ export default function EBookCTA() {
           ))}
         </div> */}
 
-        {/* Email Form */}
-        <div className={s.right}>
-          <p className={s.sub}>Via Access Through Your Mail</p>
-          <form onSubmit={handleSubmit} className={s.form}>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              required
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-            />
-            <button type="submit">Get Free E-Book</button>
-          </form>
-        </div>
       </div>
     </section>
   );

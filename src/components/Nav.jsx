@@ -35,7 +35,7 @@ export default function Nav() {
   return (
     <header className={s.header}>
       <div className={s.container}>
-        <Link to="/" className={s.logo}>Earthwise <span className="text-color">Living</span></Link>
+        <Link to="/" className={s.logo}>Glow, <span className="text-color">Softly, Gently</span></Link>
 
         {/* hamburger */}
         <button
@@ -80,7 +80,9 @@ export default function Nav() {
               PARTNERSHIP
             </a>
 
-          <div className="cart">
+            
+
+          <div className={s.cart}>
             <Link
               to="/shop"
               className={`${s.shop} ${activeLink === 'shop' ? s.active : ''}`}
