@@ -47,19 +47,20 @@ export default function SecondSection() {
     if (!email) return;
 
     emailjs.send(
-      'YOUR_SERVICE_ID',    // replace with your EmailJS service ID
-      'YOUR_TEMPLATE_ID',   // replace with your EmailJS template ID
+      process.env.REACT_APP_SERVICE_ID,
+      process.env.REACT_APP_NEWSLETTER_TEMPLATE_ID,
       { user_email: email },
-      'YOUR_PUBLIC_KEY'     // replace with your EmailJS public key
+      process.env.REACT_APP_PUBLIC_KEY
     )
-    .then(() => {
-      setStatus('Subscribed successfully!');
-      setEmail('');
-    })
-    .catch((err) => {
-      console.error(err);
-      setStatus('Subscription failed. Try again.');
-    });
+      .then(() => {
+        setStatus('Subscribed successfully!');
+        setEmail('');
+        setTimeout(() => setStatus(''), 10000);
+      })
+      .catch((err) => {
+        console.error('Newsletter subscription failed:', err);
+        setStatus('Subscription failed. Please try again.');
+      });
   };
 
   return (
