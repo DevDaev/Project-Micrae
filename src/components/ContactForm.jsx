@@ -12,10 +12,10 @@ const ContactForm = () => {
 
         try {
             await emailjs.sendForm(
-                process.env.SERVICE_ID,
-                process.env.TEMPLATE_ID,
+                process.env.REACT_APP_SERVICE_ID,
+                process.env.REACT_APP_TEMPLATE_ID,
                 formRef.current,
-                { publicKey: process.env.PUBLIC_KEY }
+                { publicKey: process.env.REACT_APP_PUBLIC_KEY }
             );
 
             setStatus('success');
@@ -24,7 +24,9 @@ const ContactForm = () => {
             // Clear success message after 3 seconds
             setTimeout(() => setStatus(''), 3000);
         } catch (error) {
-            console.error('Email send failed', error);
+            console.error('Email send failed:', error);
+            // Log the actual error text if available
+            if (error.text) console.error('Error text:', error.text);
             setStatus('error');
         }
     };

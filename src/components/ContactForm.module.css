@@ -1,8 +1,9 @@
 .contactSection {
-  padding: 4rem 2rem;
+  padding: 4rem 1.5rem;
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
+  width: 100%;
 }
 
 .form {
@@ -30,6 +31,7 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 1rem;
+  width: 100%;
 }
 
 .formGroup textarea {
@@ -39,17 +41,18 @@
 
 button {
   padding: 1rem;
-  background-color: #007bff;
+  background-color: #8968CD;
   color: white;
   border: none;
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-weight: 600
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #6a4ba3;
 }
 
 button:disabled {
