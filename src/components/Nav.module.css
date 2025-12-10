@@ -1,8 +1,8 @@
-.header{
+.header {
   margin-top: 1.5rem;
 }
 
-nav{
+nav {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,18 +11,18 @@ nav{
   width: 100%;
 }
 
-.active{
+.active {
   background: var(--clr-text);
   padding: .4rem 1.2rem;
   /* border-radius: 1rem; */
-  color: var(--clr-primary); 
+  color: var(--clr-primary);
   font-weight: 600;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: .3s;
 
 }
 
-.cart{
+.cart {
   margin-left: 10rem;
   /* margin-right: 2rem; */
 }
@@ -38,6 +38,7 @@ nav{
   margin: 12px;
   z-index: 20;
 }
+
 .hamburger span {
   width: 26px;
   height: 3px;
@@ -45,29 +46,31 @@ nav{
   transition: .3s;
 }
 
-.container .logo{
+.container .logo {
   font-weight: 700;
   color: var(--clr-bkg);
   text-decoration: none;
   margin-left: 4rem;
   font-size: 1.2rem;
 }
-.container .logo span{
+
+.container .logo span {
   color: var(--clr-heading);
 }
 
-.nav a:hover{
+.nav a:hover {
   opacity: 0.7;
   color: var(--clr-bkg)
 }
 
-.nav a{
+.nav a {
   text-decoration: none;
-  color: #000; /* default: other nav links in black */
+  color: #000;
+  /* default: other nav links in black */
   font-weight: 600;
 }
 
-.shop{
+.shop {
   background: var(--clr-bkg);
   padding: 1rem 2rem;
   border-radius: .6rem;
@@ -78,47 +81,60 @@ nav{
 
 
 @media (max-width: 767px) {
-  .hamburger { display: flex; }
+  .hamburger {
+    display: flex;
+  }
+
   .nav {
     position: fixed;
-    inset: 0 0 0 40%;          
+    inset: 0;
     display: flex;
     background: var(--clr-bg);
     /* color: #fff; */
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     padding: 6rem 2rem;
-    gap: 1.5rem;
+    gap: 2rem;
     transform: translateX(100%);
     transition: transform .35s ease-out;
     z-index: 1000;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    box-shadow: none;
   }
 
- 
-  .nav.show { transform: translateX(0); }
+
+  .nav.show {
+    transform: translateX(0);
+  }
 
   /* new classname for animation / visual state when nav is opened in responsive mode */
   .navResponsive {
     transform-origin: top center;
-    animation: nav-slide .22s cubic-bezier(.2,.9,.2,1) both;
+    animation: nav-slide .22s cubic-bezier(.2, .9, .2, 1) both;
   }
 
-  .shop{
-  background: var(--clr-bkg);
-  padding: 1rem 2rem;
-  border-radius: .6rem;
-  color: #fff;
-}
-@keyframes nav-slide {
-    from { opacity: 0; transform: translateY(-10px) scaleY(.98); }
-    to   { opacity: 1; transform: translateY(0) scaleY(1); }
+  .shop {
+    background: var(--clr-bkg);
+    padding: 1rem 2rem;
+    border-radius: .6rem;
+    color: #fff;
+  }
+
+  @keyframes nav-slide {
+    from {
+      opacity: 0;
+      transform: translateY(-10px) scaleY(.98);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0) scaleY(1);
+    }
   }
 }
 
 /* Resources link (anchor targeting) - give same pill style as shop */
-.nav a[href="#resources"]{
+.nav a[href="#resources"] {
   background: var(--clr-bkg);
   color: #fff;
   padding: .6rem 1rem;
@@ -127,12 +143,12 @@ nav{
 }
 
 /* Active link: text in --clr-bkg, keep pill background for contrast */
-.active{
+.active {
   background: var(--clr-text);
   color: var(--clr-bkg);
   padding: .4rem 1.2rem;
-  color: var(--clr-bkg); 
+  color: var(--clr-bkg);
   font-weight: 600;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: .3s;
 }
