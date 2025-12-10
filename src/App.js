@@ -1,13 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
-import Nav              from './components/Nav';
-import Hero             from './components/Hero';
-import SecondSection    from './components/SecondSection';
-import EBookCTA         from './components/EBookCTA';
-import LatestArticles   from './components/LatestArticles';
+import Nav from './components/Nav';
+import Hero from './components/Hero';
+import SecondSection from './components/SecondSection';
+import EBookCTA from './components/EBookCTA';
+import LatestArticles from './components/LatestArticles';
 import YoutubeNewsletter from './components/YoutubeNewsletter';
-import Footer           from './components/Footer';
-import Login            from './pages/Login';
-import Signup           from './pages/Signup'; // ← new
+import Footer from './components/Footer';
+import Login from './pages/Login';
+import Signup from './pages/Signup'; // ← new
+import ContactForm from './components/ContactForm';
 import './index.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <EBookCTA />
             <LatestArticles />
             <YoutubeNewsletter />
+            <ContactForm />
             <Footer />
           </>
         } />
