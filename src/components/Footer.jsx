@@ -7,7 +7,7 @@ export default function Footer() {
       <div className={s.container}>
         <div className={s.social}>
           <a
-            href="https://www.instagram.com/desola"
+            href="https://www.instagram.com/hello_hellosun/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -22,7 +22,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://Substack.com/desola"
+            href="https://substack.com/profile/5905599-desola?utm_source=global-search"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Substack"
